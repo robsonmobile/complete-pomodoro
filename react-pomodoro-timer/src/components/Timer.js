@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './styles.css';
+import '../styles/styles.css';
 import Time from './Time';
 import Controls from './Controls';
 import { TWENTY_FIVE, FIVE } from '../utils/helpers';
