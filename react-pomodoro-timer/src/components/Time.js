@@ -1,7 +1,11 @@
 import React from 'react';
 
-const Time = () => {
-	return <span className="time">25:00</span>;
+const Time = props => {
+	return (
+		<span className="time">{`${props.time.minutes}:${
+			props.time.seconds
+		}`}</span>
+	);
 };
 
 export default Time;

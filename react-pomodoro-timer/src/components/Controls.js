@@ -1,10 +1,23 @@
 import React from 'react';
 
-const Controls = () => {
+const Controls = props => {
 	return (
 		<div className="controls">
-			<button>Start</button>
-			<button>Stop</button>
+			<button onClick={props.handleStartTimer}>
+				<span role="img" aria-label="start-timer">
+					👩‍💻
+				</span>
+			</button>
+			<button onClick={props.handleStopTimer}>
+				<span role="img" aria-label="pause-timer">
+					⏸{' '}
+				</span>
+			</button>
+			<button onClick={props.onReset}>
+				<span role="img" aria-label="reset-timer">
+					⥀
+				</span>
+			</button>
 		</div>
 	);
 };
