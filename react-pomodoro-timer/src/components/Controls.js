@@ -2,7 +2,7 @@ import React from 'react';
 
 const Controls = () => {
 	return (
-		<div>
+		<div className="controls">
 			<button>Start</button>
 			<button>Stop</button>
 		</div>
