@@ -47,8 +47,11 @@ class Timer extends Component {
 				interval: null
 			});
 		}
+<<<<<<< HEAD
 		// TODO: FIX, try moving in net phase
 		alarmAudio.play();
+=======
+>>>>>>> feature-audio
 	}
 
 	startTimer() {
@@ -96,6 +99,7 @@ class Timer extends Component {
 					? this.getTimeRemaining(TWENTY_FIVE)
 					: this.getTimeRemaining(FIVE)
 		});
+		alarmAudio.play();
 	}
 
 	onReset() {
