@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Paper from 'material-ui/Paper';
 
 import '../styles/styles.css';
 import Time from './Time';
@@ -7,6 +8,12 @@ import { TWENTY_FIVE, FIVE } from '../utils/helpers';
 import Alarm from '../songs/alarm.mp3';
 
 const alarmAudio = new Audio(Alarm);
+
+const style = {
+	height: 220,
+	width: 500,
+	textAlign: 'center'
+};
 
 class Timer extends Component {
 	constructor() {
@@ -40,6 +47,7 @@ class Timer extends Component {
 				interval: null
 			});
 		}
+		// TODO: FIX, try moving in net phase
 		alarmAudio.play();
 	}
 
@@ -99,12 +107,14 @@ class Timer extends Component {
 	render() {
 		return (
 			<div className="timer">
-				<Time time={this.state.timeRemaining} />{' '}
-				<Controls
-					handleStartTimer={this.handleStartTimer}
-					handleStopTimer={this.handleStopTimer}
-					onReset={this.onReset}
-				/>
+				<Paper style={style} zDepth={2}>
+					<Time time={this.state.timeRemaining} />{' '}
+					<Controls
+						handleStartTimer={this.handleStartTimer}
+						handleStopTimer={this.handleStopTimer}
+						onReset={this.onReset}
+					/>
+				</Paper>
 			</div>
 		);
 	}
