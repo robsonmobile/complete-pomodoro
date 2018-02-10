@@ -50,3 +50,85 @@ button:hover {
 .footerPad a {
 	text-decoration: none;
 }
+
+.timer-card {
+	height: 320px;
+	width: 500px;
+	text-align: center;
+}
+
+.about-card {
+	padding: 10px;
+	height: 320px;
+	width: 500px;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+@media only screen and (max-device-width: 480px) {
+	.timer {
+		width: 200px;
+		margin: 50px;
+		text-align: center;
+	}
+
+	.time {
+		font-size: 4rem;
+	}
+
+	button {
+		font-size: 1rem;
+		width: 40px;
+	}
+	.about {
+		width: 200px;
+		margin: 50px;
+		text-align: center;
+	}
+	.timer-card {
+		height: 150px;
+		width: 250px;
+		text-align: center;
+	}
+	.about-card {
+		padding: 15px;
+		height: 250px;
+		width: 250px;
+		text-align: center;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-device-width: 768px) {
+	.timer {
+		width: 200px;
+		margin: 80px;
+		text-align: center;
+	}
+
+	.time {
+		font-size: 4rem;
+	}
+
+	button {
+		font-size: 1rem;
+		width: 40px;
+	}
+	.about {
+		width: 200px;
+		margin: 80px;
+		text-align: center;
+	}
+	.timer-card {
+		height: 150px;
+		width: 250px;
+		text-align: center;
+	}
+	.about-card {
+		padding: 15px;
+		height: 250px;
+		width: 250px;
+		text-align: center;
+		font-size: 1rem;
+	}
+}

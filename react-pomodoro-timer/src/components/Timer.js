@@ -9,12 +9,6 @@ import Alarm from '../songs/alarm.mp3';
 
 const alarmAudio = new Audio(Alarm);
 
-const style = {
-	height: 220,
-	width: 500,
-	textAlign: 'center'
-};
-
 class Timer extends Component {
 	constructor() {
 		super();
@@ -106,7 +100,7 @@ class Timer extends Component {
 	render() {
 		return (
 			<div className="timer">
-				<Paper style={style} zDepth={2}>
+				<Paper className="timer-card" zDepth={2}>
 					<Time time={this.state.timeRemaining} />{' '}
 					<Controls
 						handleStartTimer={this.handleStartTimer}
