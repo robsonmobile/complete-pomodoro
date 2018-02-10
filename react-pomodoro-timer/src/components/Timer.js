@@ -32,8 +32,6 @@ class Timer extends Component {
 
 	handleStopTimer() {
 		if (this.state.interval) {
-			console.log('stopping...');
-
 			clearInterval(this.state.interval);
 			this.setState({
 				interval: null
@@ -57,13 +55,11 @@ class Timer extends Component {
 				timeRemaining
 			});
 		} else {
-			// move to next phase
 			this.nextPhase();
 		}
 	}
 
 	getTimeRemaining(timeInMilliSecs) {
-		// return a string value of the time remaining
 		const total = timeInMilliSecs,
 			minutes = Math.floor((total / 1000 / 60) % 60),
 			seconds =
@@ -81,7 +77,6 @@ class Timer extends Component {
 	nextPhase() {
 		this.handleStopTimer();
 		let step = this.state.step + 1;
-
 		this.setState({
 			step,
 			timeRemaining:
@@ -96,11 +91,10 @@ class Timer extends Component {
 			timeRemaining: this.getTimeRemaining(TWENTY_FIVE)
 		});
 	}
-
 	render() {
 		return (
 			<div className="timer">
-				<Time time={this.state.timeRemaining} />
+				<Time time={this.state.timeRemaining} />{' '}
 				<Controls
 					handleStartTimer={this.handleStartTimer}
 					handleStopTimer={this.handleStopTimer}
