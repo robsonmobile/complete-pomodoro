@@ -4,6 +4,9 @@ import '../styles/styles.css';
 import Time from './Time';
 import Controls from './Controls';
 import { TWENTY_FIVE, FIVE } from '../utils/helpers';
+import Alarm from '../songs/alarm.mp3';
+
+const alarmAudio = new Audio(Alarm);
 
 class Timer extends Component {
 	constructor() {
@@ -37,6 +40,7 @@ class Timer extends Component {
 				interval: null
 			});
 		}
+		alarmAudio.play();
 	}
 
 	startTimer() {
@@ -91,6 +95,7 @@ class Timer extends Component {
 			timeRemaining: this.getTimeRemaining(TWENTY_FIVE)
 		});
 	}
+
 	render() {
 		return (
 			<div className="timer">
@@ -99,7 +104,7 @@ class Timer extends Component {
 					handleStartTimer={this.handleStartTimer}
 					handleStopTimer={this.handleStopTimer}
 					onReset={this.onReset}
-				/>{' '}
+				/>
 			</div>
 		);
 	}
