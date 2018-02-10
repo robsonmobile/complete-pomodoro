@@ -40,7 +40,6 @@ class Timer extends Component {
 				interval: null
 			});
 		}
-		alarmAudio.play();
 	}
 
 	startTimer() {
@@ -88,6 +87,7 @@ class Timer extends Component {
 					? this.getTimeRemaining(TWENTY_FIVE)
 					: this.getTimeRemaining(FIVE)
 		});
+		alarmAudio.play();
 	}
 
 	onReset() {
